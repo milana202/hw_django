@@ -15,7 +15,10 @@ Including another URLconf
 """
 
 from django.urls import path
+from calculator.views import recipe_view
 
 urlpatterns = [
+    path('dish/', recipe_view, name='recipe'),
     # здесь зарегистрируйте вашу view-функцию
 ]
+# http://127.0.0.1:8000/dish/?recipe=omlet&servings=1/
